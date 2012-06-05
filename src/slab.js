@@ -230,7 +230,7 @@ function SlabTemplate(){
 function inlineIncludes(templates, deps, _, name){
 	if (deps.indexOf(name) != -1){
 		deps.push(name);
-		throw new SlabError('Recursive includes for template "' + name + '" (' + deps.join(' > ') + ').');
+		// throw new SlabError('Recursive includes for template "' + name + '" (' + deps.join(' > ') + ').');
 	}
 
 	deps.push(name);
@@ -341,5 +341,3 @@ context.slab = {
 };
 
 })(typeof exports != 'undefined' ? exports : this);
-
-
